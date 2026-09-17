@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Admin · Mr.MR</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <main class="admin-shell">
+    <section id="loginView" class="login-card">
+      <div class="brand-mark">MR</div>
+      <div class="kicker">MR.MR / PRIVATE</div>
+      <h1>Admin access.</h1>
+      <p>Sign in to view leads and manage client projects.</p>
+      <form id="loginForm">
+        <label>Email<input id="loginEmail" type="email" autocomplete="username" required placeholder="admin@email.com"></label>
+        <label>Password<input id="loginPassword" type="password" autocomplete="current-password" required placeholder="••••••••"></label>
+        <button class="primary" type="submit" id="loginButton">Sign in <span>↗</span></button>
+        <div id="loginStatus" class="status"></div>
+      </form>
+      <a class="back" href="index.html">← Back to Mr.MR</a>
+    </section>
+
+    <section id="resetView" class="login-card" hidden>
+      <div class="brand-mark">MR</div>
+      <div class="kicker">MR.MR / SECURITY</div>
+      <h1>Set new password.</h1>
+      <p>Create a new password for your Mr.MR admin account.</p>
+      <form id="resetForm">
+        <label>New password<input id="newPassword" type="password" autocomplete="new-password" minlength="8" required placeholder="Enter new password"></label>
+        <label>Confirm password<input id="confirmPassword" type="password" autocomplete="new-password" minlength="8" required placeholder="Confirm new password"></label>
+        <button class="primary" type="submit" id="resetPasswordButton">Set new password <span>↗</span></button>
+        <div id="resetStatus" class="status"></div>
+      </form>
+    </section>
+
+    <section id="dashboardView" class="dashboard" hidden>
+      <header class="dash-header">
+        <div>
+          <div class="kicker">MR.MR / ADMIN</div>
+          <h1>Lead command center.</h1>
+          <p>Turn incoming inquiries into organized client projects, track progress, and keep delivery moving.</p>
+        </div>
+        <div class="header-actions">
+          <span id="adminEmail" class="admin-email"></span>
+          <div class="notification-wrap">
+            <button id="notificationButton" class="ghost notification-button" type="button" aria-expanded="false">Notifications <span id="notificationCount" class="notification-count" hidden>0</span></button>
+            <div id="notificationPanel" class="notification-panel" hidden>
+              <div class="notification-panel-head"><strong>Notifications</strong><button id="markAllReadButton" class="text-button" type="button">Mark all read</button></div>
+              <div id="notificationList" class="notification-list"></div>
+            </div>
+          </div>
+          <button id="refreshButton" class="ghost">Refresh</button>
+          <button id="logoutButton" class="ghost">Sign out</button>
+        </div>
+      </header>
+
+      <nav class="admin-tabs" aria-label="Admin sections">
+        <button class="tab-button active" data-tab="leadsView">Leads</button>
+        <button class="tab-button" data-tab="projectsView">Projects</button>
+        <button class="tab-button" data-tab="clientsView">Clients</button>
+      </nav>
+
+      <section id="leadsView" class="admin-tab-view">
+        <div id="dashboardStatus" class="status"></div>
+        <section class="stats" aria-label="Lead summary">
+          <article><span>Total leads</span><strong id="statTotal">0</strong></article>
+          <article><span>New</span><strong id="statNew">0</strong></article>
+          <article><span>In progress</span><strong id="statProgress">0</strong></article>
+          <article><span>Won</span><strong id="statWon">0</strong></article>
+        </section>
+
+        <section class="toolbar">
+          <input id="searchInput" type="search" placeholder="Search name, email, business…" aria-label="Search inquiries">
+          <select id="statusFilter" aria-label="Filter by status">
+            <option value="ALL">All statuses</option><option value="NEW">New</option><option value="CONTACTED">Contacted</option><option value="DISCUSSION">Discussion</option><option value="PROPOSAL">Proposal</option><option value="WON">Won</option><option value="LOST">Lost</option>
+          </select>
+        </section>
+
+        <section class="lead-table-wrap">
+          <div class="table-head"><span>Project inquiries</span><small id="resultCount">0 results</small></div>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>Lead</th><th>Service</th><th>Budget</th><th>Received</th><th>Status</th><th></th></tr></thead>
+              <tbody id="leadRows"></tbody>
+            </table>
+          </div>
+          <div id="emptyState" class="empty" hidden>No inquiries match your current filters.</div>
+        </section>
+      </section>
+
+      <section id="projectsView" class="admin-tab-view" hidden>
+        <div id="projectsStatus" class="status"></div>
+        <section class="section-heading">
+          <div><div class="kicker">DELIVERY</div><h2>Project workspace.</h2><p>Manage active work, deadlines, progress, links, notes, and tasks.</p></div>
+          <button id="newProjectButton" class="primary compact">New project <span>↗</span></button>
+        </section>
+
+        <section class="stats project-stats" aria-label="Project summary">
+          <article><span>Total projects</span><strong id="projectStatTotal">0</strong></article>
+          <article><span>Active</span><strong id="projectStatActive">0</strong></article>
+          <article><span>Due soon</span><strong id="projectStatDue">0</strong></article>
+          <article><span>Completed</span><strong id="projectStatCompleted">0</strong></article>
+        </section>
+
+        <section class="toolbar">
+          <input id="projectSearchInput" type="search" placeholder="Search project, client, service…" aria-label="Search projects">
+          <select id="projectStatusFilter" aria-label="Filter projects">
+            <option value="ALL">All project statuses</option><option value="PLANNING">Planning</option><option value="ACTIVE">Active</option><option value="ON_HOLD">On hold</option><option value="COMPLETED">Completed</option><option value="CANCELLED">Cancelled</option>
+          </select>
+        </section>
+
+        <section class="lead-table-wrap">
+          <div class="table-head"><span>Projects</span><small id="projectResultCount">0 projects</small></div>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>Project</th><th>Client</th><th>Status</th><th>Progress</th><th>Due</th><th></th></tr></thead>
+              <tbody id="projectRows"></tbody>
+            </table>
+          </div>
+          <div id="projectEmptyState" class="empty" hidden>No projects match your current filters.</div>
+        </section>
+      </section>
+
+      <section id="clientsView" class="admin-tab-view" hidden>
+        <div id="clientsStatus" class="status"></div>
+        <section class="section-heading">
+          <div>
+            <div class="kicker">CRM</div>
+            <h2>Client workspace.</h2>
+            <p>Keep client relationships, contact details, and active work in one place.</p>
+          </div>
+          <button id="newClientButton" class="primary compact" type="button">New client <span>↗</span></button>
+        </section>
+
+        <section class="stats client-stats" aria-label="Client summary">
+          <article><span>Total clients</span><strong id="clientStatTotal">0</strong></article>
+          <article><span>Active</span><strong id="clientStatActive">0</strong></article>
+          <article><span>Inactive</span><strong id="clientStatInactive">0</strong></article>
+          <article><span>Archived</span><strong id="clientStatArchived">0</strong></article>
+        </section>
+
+        <section class="toolbar">
+          <input id="clientSearchInput" type="search" placeholder="Search client, business, email…" aria-label="Search clients">
+          <select id="clientStatusFilter" aria-label="Filter clients">
+            <option value="ALL">All client statuses</option>
+            <option value="ACTIVE">Active</option>
+            <option value="INACTIVE">Inactive</option>
+            <option value="ARCHIVED">Archived</option>
+          </select>
+        </section>
+
+        <section class="lead-table-wrap">
+          <div class="table-head"><span>Clients</span><small id="clientResultCount">0 clients</small></div>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>Client</th><th>Business</th><th>Contact</th><th>Status</th><th>Added</th><th></th></tr></thead>
+              <tbody id="clientRows"></tbody>
+            </table>
+          </div>
+          <div id="clientEmptyState" class="empty" hidden>No clients match your current filters.</div>
+        </section>
+      </section>
+    </section>
+  </main>
+
+  <dialog id="detailDialog" class="detail-dialog">
+    <div class="detail-head"><div><span class="kicker">INQUIRY DETAILS</span><h2 id="detailTitle">Lead</h2></div><button id="closeDialog" class="icon-button" aria-label="Close">×</button></div>
+    <div id="detailContent" class="detail-content"></div>
+  </dialog>
+
+  <dialog id="clientDialog" class="small-dialog">
+    <div class="detail-head">
+      <div><span class="kicker">CLIENT CRM</span><h2 id="clientDialogTitle">New client</h2></div>
+      <button id="closeClientDialog" class="icon-button" aria-label="Close">×</button>
+    </div>
+    <form id="clientForm" class="project-form">
+      <input id="clientId" type="hidden">
+      <label>Client name<input id="clientName" required placeholder="Client name"></label>
+      <div class="form-grid">
+        <label>Email<input id="clientEmail" type="email" placeholder="client@email.com"></label>
+        <label>Phone / WhatsApp<input id="clientPhone" placeholder="+91…"></label>
+        <label>Business<input id="clientBusiness" placeholder="Business or company"></label>
+        <label>Status<select id="clientStatus"><option>ACTIVE</option><option>INACTIVE</option><option>ARCHIVED</option></select></label>
+        <label>Website / Social<input id="clientWebsite" type="url" placeholder="https://…"></label>
+      </div>
+      <label>Notes<textarea id="clientNotes" rows="4" placeholder="Relationship notes, preferences, scope history…"></textarea></label>
+      <div class="project-form-actions">
+        <button type="button" id="cancelClientButton" class="ghost">Cancel</button>
+        <button type="submit" id="saveClientButton" class="primary compact">Save client <span>↗</span></button>
+      </div>
+      <div id="clientFormStatus" class="status"></div>
+    </form>
+  </dialog>
+
+  <dialog id="projectDialog" class="detail-dialog project-dialog">
+    <div class="detail-head"><div><span class="kicker">PROJECT WORKSPACE</span><h2 id="projectDialogTitle">New project</h2></div><button id="closeProjectDialog" class="icon-button" aria-label="Close">×</button></div>
+    <form id="projectForm" class="project-form">
+      <input id="projectId" type="hidden">
+      <input id="projectInquiryId" type="hidden">
+      <div class="form-grid">
+        <label>Project name<input id="projectName" required placeholder="e.g. City Pulse website"></label>
+        <label>Client name<input id="projectClientName" placeholder="Client name"></label>
+        <label>Client email<input id="projectClientEmail" type="email" placeholder="client@email.com"></label>
+        <label>Phone / WhatsApp<input id="projectClientPhone" placeholder="+91…"></label>
+        <label>Service<input id="projectService" placeholder="Website development"></label>
+        <label>Budget<input id="projectBudget" placeholder="₹50,000"></label>
+        <label>Status<select id="projectStatus"><option>PLANNING</option><option>ACTIVE</option><option>ON_HOLD</option><option>COMPLETED</option><option>CANCELLED</option></select></label>
+        <label>Progress <span id="progressValue">0%</span><input id="projectProgress" type="range" min="0" max="100" value="0"></label>
+        <label>Start date<input id="projectStartDate" type="date"></label>
+        <label>Due date<input id="projectDueDate" type="date"></label>
+        <label>Live / project URL<input id="projectUrl" type="url" placeholder="https://…"></label>
+        <label>Repository URL<input id="projectRepoUrl" type="url" placeholder="https://github.com/…"></label>
+      </div>
+      <label>Notes<textarea id="projectNotes" rows="4" placeholder="Scope, decisions, client notes, delivery notes…"></textarea></label>
+
+      <section id="taskSection" class="task-section" hidden>
+        <div class="task-head"><div><div class="kicker">TASKS</div><h3>Delivery checklist</h3></div><button type="button" id="addTaskButton" class="ghost">Add task</button></div>
+        <div id="taskList" class="task-list"></div>
+      </section>
+
+      <div class="project-form-actions"><button type="button" id="cancelProjectButton" class="ghost">Cancel</button><button type="submit" id="saveProjectButton" class="primary compact">Save project <span>↗</span></button></div>
+      <div id="projectFormStatus" class="status"></div>
+    </form>
+  </dialog>
+
+  <dialog id="taskDialog" class="small-dialog">
+    <div class="detail-head"><div><span class="kicker">PROJECT TASK</span><h2 id="taskDialogTitle">Add task</h2></div><button id="closeTaskDialog" class="icon-button" aria-label="Close">×</button></div>
+    <form id="taskForm" class="project-form">
+      <input id="taskId" type="hidden"><input id="taskProjectId" type="hidden">
+      <label>Task title<input id="taskTitle" required placeholder="e.g. Approve homepage design"></label>
+      <label>Description<textarea id="taskDescription" rows="3" placeholder="What needs to be done?"></textarea></label>
+      <div class="form-grid">
+        <label>Priority<select id="taskPriority"><option>LOW</option><option selected>MEDIUM</option><option>HIGH</option></select></label>
+        <label>Status<select id="taskStatus"><option>TODO</option><option>IN_PROGRESS</option><option>DONE</option></select></label>
+        <label>Due date<input id="taskDueDate" type="date"></label>
+      </div>
+      <div class="project-form-actions"><button type="button" id="cancelTaskButton" class="ghost">Cancel</button><button type="submit" class="primary compact">Save task <span>↗</span></button></div>
+      <div id="taskFormStatus" class="status"></div>
+    </form>
+  </dialog>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

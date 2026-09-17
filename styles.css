@@ -14,3 +14,13 @@ header{position:fixed;z-index:40;inset:0 0 auto;background:rgba(7,8,9,.8);backdr
 .pagehero{padding:155px 0 80px;border-bottom:1px solid var(--line)}.pagehero h1{max-width:850px}.pagehero p{max-width:680px;color:#999da5;font-size:16px}.crumb{font:500 10px "DM Mono";color:#72767e}.crumb a:hover{color:var(--accent)}
 .reveal{opacity:0;transform:translateY(18px);transition:.7s}.reveal.visible{opacity:1;transform:none}.delay{transition-delay:.12s}
 @media(max-width:900px){.navlinks{display:none;position:absolute;top:68px;left:20px;right:20px;background:#111318;border:1px solid var(--line);border-radius:15px;padding:15px;flex-direction:column}.navlinks.open{display:flex}.menu{display:block}.navcta{display:none}.hero-grid,.two,.product,.startgrid,.contactgrid{grid-template-columns:1fr}.visual{height:450px}.cards{grid-template-columns:1fr}.card,.card:nth-child(even){padding:28px 0;border-left:0}.workgrid{grid-template-columns:1fr}.project.featured{grid-row:auto}.featured .art{height:270px}}@media(max-width:650px){.container{width:calc(100% - 28px)}.section{padding:80px 0}.heading{grid-template-columns:40px 1fr;gap:7px;margin-bottom:45px}.hero{padding-top:130px}.hero h1{font-size:clamp(46px,15vw,68px)}.actions{flex-direction:column}.btn{justify-content:center}.formrow{grid-template-columns:1fr}.product{padding:28px}.product h3{font-size:36px}.timeline article{grid-template-columns:1fr;gap:8px}.links a{grid-template-columns:75px 1fr 15px}footer .container{flex-direction:column}}
+
+
+/* V5.1 inquiry status */
+.status.success {
+  color: #1f7a4d;
+}
+
+.status.error {
+  color: #b42318;
+}
