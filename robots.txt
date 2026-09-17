@@ -1,0 +1,4 @@
+﻿User-agent: *
+Allow: /
+
+Sitemap: https://mrmr-website.vercel.app/sitemap.xml
