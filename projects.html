@@ -1,2 +1,168 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Mr.MR — Manikanta Rachamanti"><title>Projects · Mr.MR</title><link rel="stylesheet" href="styles.css"></head><body><div class="noise"></div><header><div class="container nav"><a href="index.html" class="logo"><span>MR</span> Mr.MR</a><nav class="navlinks"><a class="" href="about.html">About</a><a class="" href="services.html">Services</a><a class="active" href="projects.html">Work</a><a class="" href="index.html#products">Products</a><a href="index.html#contact">Contact</a></nav><a class="navcta" href="start-a-project.html">Start a Project <b>↗</b></a><button class="menu" aria-label="Open menu"><i></i><i></i></button></div></header><main><section class="pagehero"><div class="container"><div class="crumb"><a href="index.html">Mr.MR</a> / Work</div><h1>Selected <em>projects.</em></h1><p>Technology ideas I've explored across smart cities, AI, food technology, IoT and games.</p></div></section>
-<section class="section"><div class="container"><div class="workgrid"><article class="project featured"><div class="art city"><strong>CITY<br>PULSE</strong><small>SMART CITY PLATFORM</small></div><div class="pbody"><small>FLUTTER · MAPS · REST APIs</small><h3>City Pulse</h3><p>Smart-city mobile app concept bringing services, updates, maps, alerts, complaints and citizen experiences into one platform.</p><div class="tags"><i>Flutter</i><i>Google Maps</i><i>REST APIs</i></div></div></article><article class="project"><div class="art ai"><strong>AI<br>REVENUE</strong><small>STRATEGY ENGINE</small></div><div class="pbody"><small>NEXT.JS · AI · MARKETING</small><h3>AI Revenue Engine</h3><p>AI-first product concept for understanding businesses, generating campaign strategy and explaining marketing performance.</p><div class="tags"><i>Next.js</i><i>AI</i><i>Meta Ads</i></div></div></article><article class="project"><div class="art dine"><strong>SMART<br>DINE</strong><small>ETA-BASED DINING</small></div><div class="pbody"><small>FOOD TECH · UX</small><h3>Smart Dine</h3><p>Dining concept focused on reducing waiting time through booking, orders, tables and ETA-based arrival.</p><div class="tags"><i>Product</i><i>ETA</i><i>Food Tech</i></div></div></article><article class="project"><div class="art wild"><strong>WILD<br>ALERT</strong><small>CROP PROTECTION</small></div><div class="pbody"><small>ESP32 · SENSORS · GSM</small><h3>Wild Animal Alert System</h3><p>IoT concept using sensors and alerts to help farmers respond to animal intrusion and reduce crop damage.</p><div class="tags"><i>ESP32</i><i>PIR</i><i>GSM</i></div></div></article><article class="project"><div class="art game" style="background:linear-gradient(135deg,#ff7a1a 0%,#4a2c1d 100%)"><strong>MASALA<br>MERGE</strong><small>FOOD MERGE PUZZLE</small></div><div class="pbody"><small>HTML · CSS · JAVASCRIPT</small><h3>Masala Merge</h3><p>Free browser puzzle game with an Indian food theme. Swipe, drag or use the arrow keys to merge ingredients from chilli all the way up to the Royal Thali.</p><div class="tags"><i>HTML</i><i>JavaScript</i><i>Game</i></div><p><a class="btn secondary" href="https://masala-merge.vercel.app/" target="_blank" rel="noopener">Play now <b>↗</b></a></p></div></article></div></div></section></main><footer><div class="container"><strong>Mr.MR</strong><span>Manikanta Rachamanti · AI · Technology · Digital Growth</span><span>© 2026</span></div></footer><script src="script.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore Manikanta Rachamanti's projects across AI, smart-city technology, hardware, and browser games. See what is live, in development, and at idea stage.">
+  <meta name="theme-color" content="#08090a">
+  <title>Projects & Experiments · Mr.MR</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="logo" aria-label="Mr.MR home"><span>MR</span> Mr.MR</a>
+      <nav class="navlinks" aria-label="Main navigation">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a class="active" aria-current="page" href="projects.html">Work</a>
+        <a href="index.html#products">Products</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <a class="navcta" href="start-a-project.html">Start a Project <b>↗</b></a>
+      <button class="menu" aria-label="Toggle navigation" aria-expanded="false"><i></i><i></i></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="pagehero">
+      <div class="container">
+        <div class="crumb"><a href="index.html">Mr.MR</a> / Work</div>
+        <h1>Ideas in motion.<br><em>Built with purpose.</em></h1>
+        <p>A collection of products, experiments and engineering concepts at different stages — from live browser games to early-stage AI and hardware ideas.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="portfolio-intro">
+          <div>
+            <div class="page-kicker">THE PROJECT PORTFOLIO</div>
+            <h2 style="font-size:clamp(28px,4vw,42px);line-height:1.1;letter-spacing:-.055em;margin:10px 0 0">Built, building, and <em>imagining.</em></h2>
+          </div>
+          <p>Project stages are shown transparently. “Live” means a playable or deployed experience is available; concepts and research-stage ideas are labelled accordingly.</p>
+        </div>
+
+        <div class="project-filters" role="group" aria-label="Filter projects by status">
+          <button class="project-filter active" type="button" data-filter="all" aria-pressed="true">All projects</button>
+          <button class="project-filter" type="button" data-filter="live" aria-pressed="false">Live</button>
+          <button class="project-filter" type="button" data-filter="development" aria-pressed="false">In development</button>
+          <button class="project-filter" type="button" data-filter="idea" aria-pressed="false">Idea stage</button>
+        </div>
+
+        <div class="workgrid" id="projectGrid">
+          <article class="project" data-status="live">
+            <div class="project-visual chef-visual">
+              <span class="project-number">01 / LIVE PRODUCT</span>
+              <div class="project-mark"><strong>MR.<br>CHEF</strong><small>MERGE · MASTER · BECOME THE CHEF</small></div>
+            </div>
+            <div class="project-body">
+              <div class="project-topline"><span class="project-category">Browser game · HTML · CSS · JavaScript</span><span class="status-badge status-live">Live</span></div>
+              <h2>MR.CHEF</h2>
+              <p>An Indian-food-inspired merge puzzle where players combine ingredients and work their way toward the Royal Thali.</p>
+              <div class="tags"><i>HTML</i><i>CSS</i><i>JavaScript</i><i>Game design</i></div>
+              <div class="project-actions"><a class="btn primary" href="https://mr-chef-03-red.vercel.app/" target="_blank" rel="noopener noreferrer">Play MR.CHEF <b>↗</b></a></div>
+            </div>
+          </article>
+
+          <article class="project" data-status="live">
+            <div class="project-visual game-visual">
+              <span class="project-number">02 / LIVE PRODUCT</span>
+              <div class="project-mark"><strong>MASALA<br>MERGE</strong><small>FOOD MERGE PUZZLE</small></div>
+            </div>
+            <div class="project-body">
+              <div class="project-topline"><span class="project-category">Browser game · Web technologies</span><span class="status-badge status-live">Live</span></div>
+              <h2>Masala Merge</h2>
+              <p>A free browser puzzle game inspired by Indian food. Swipe, drag or use the arrow keys to merge ingredients, progressing from chilli toward the Royal Thali.</p>
+              <div class="tags"><i>HTML</i><i>CSS</i><i>JavaScript</i><i>Game</i></div>
+              <div class="project-actions"><a class="btn primary" href="https://masala-merge.vercel.app/" target="_blank" rel="noopener noreferrer">Play now <b>↗</b></a></div>
+            </div>
+          </article>
+
+          <article class="project" data-status="development">
+            <div class="project-visual city-visual">
+              <span class="project-number">03 / PRODUCT DEVELOPMENT</span>
+              <div class="project-mark"><strong>CITY<br>PULSE</strong><small>SMART CITY PLATFORM</small></div>
+            </div>
+            <div class="project-body">
+              <div class="project-topline"><span class="project-category">Mobile app · Maps · Civic technology</span><span class="status-badge status-development">In Development</span></div>
+              <h2>City Pulse</h2>
+              <p>A smart-city mobile app concept bringing civic services, local updates, maps, alerts and complaints into one experience. Smart Dine was an idea within the broader City Pulse ecosystem, not a separate project.</p>
+              <div class="tags"><i>Flutter</i><i>Google Maps</i><i>REST APIs</i><i>Civic tech</i></div>
+            </div>
+          </article>
+
+          <article class="project" data-status="idea">
+            <div class="project-visual ai-visual">
+              <span class="project-number">04 / EARLY CONCEPT</span>
+              <div class="project-mark"><strong>MR.AI<br>REVENUE</strong><small>AI STRATEGY ENGINE</small></div>
+            </div>
+            <div class="project-body">
+              <div class="project-topline"><span class="project-category">AI · Marketing intelligence</span><span class="status-badge status-idea">Idea Stage</span></div>
+              <h2>MR.AI — AI Revenue Engine</h2>
+              <p>An early-stage product idea to help businesses understand performance, explore campaign strategies and turn marketing data into practical next steps.</p>
+              <div class="tags"><i>AI</i><i>Business analytics</i><i>Marketing</i></div>
+              <p class="project-note">Concept stage — features and technical approach are still being explored.</p>
+            </div>
+          </article>
+
+          <article class="project" data-status="idea">
+            <div class="project-visual wild-visual">
+              <span class="project-number">05 / RESEARCH & FUNDING</span>
+              <div class="project-mark"><strong>WILD<br>ANIMAL ALERT</strong><small>SOLAR · AI · HARDWARE</small></div>
+            </div>
+            <div class="project-body">
+              <div class="project-topline"><span class="project-category">Hardware · AI · Solar power</span><span class="status-badge status-idea">Idea Stage</span></div>
+              <h2>Solar-Powered AI Animal Intrusion Detection</h2>
+              <p>An early-stage hardware and AI system concept intended to detect animal movement near farms or sensitive areas, then provide alerts to help reduce crop damage and improve response time.</p>
+              <div class="tags"><i>AI detection</i><i>Solar power</i><i>Embedded systems</i><i>Sensors</i></div>
+              <p class="project-note">Seeking financial support and collaborators to validate the concept and explore a practical prototype.</p>
+              <div class="project-actions"><a class="btn secondary" href="mailto:rachamantimani243@gmail.com?subject=Solar-Powered%20AI%20Animal%20Intrusion%20Project%20-%20Funding%20Discussion">Discuss funding <b>↗</b></a></div>
+            </div>
+          </article>
+        </div>
+
+        <aside class="funding-note">
+          <div>
+            <h3>Interested in supporting the animal-intrusion project?</h3>
+            <p>I'm exploring financial support, technical guidance and potential collaborators to assess feasibility and develop an initial prototype. The project is currently at the idea stage.</p>
+          </div>
+          <a class="btn secondary" href="mailto:rachamantimani243@gmail.com?subject=Project%20Support%20-%20Solar%20AI%20Animal%20Alert">Get in touch <b>↗</b></a>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container"><strong>Mr.MR</strong><span>Manikanta Rachamanti · AI · Technology · Digital Growth</span><span>© 2026</span></div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    (() => {
+      const filters = document.querySelectorAll('.project-filter');
+      const cards = document.querySelectorAll('#projectGrid .project');
+      filters.forEach((button) => {
+        button.addEventListener('click', () => {
+          const filter = button.dataset.filter;
+          filters.forEach((item) => {
+            const selected = item === button;
+            item.classList.toggle('active', selected);
+            item.setAttribute('aria-pressed', String(selected));
+          });
+          cards.forEach((card) => {
+            card.hidden = filter !== 'all' && card.dataset.status !== filter;
+          });
+        });
+      });
+      const menu = document.querySelector('.menu');
+      const nav = document.querySelector('.navlinks');
+      menu?.addEventListener('click', () => {
+        const isOpen = nav?.classList.toggle('open') ?? false;
+        menu.setAttribute('aria-expanded', String(isOpen));
+      });
+    })();
+  </script>
+</body>
+</html>
