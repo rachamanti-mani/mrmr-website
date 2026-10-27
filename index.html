@@ -1,8 +1,139 @@
-<!doctype html><html lang="en"><head><meta name="google-site-verification" content="cV3dlOEMHW_KRwZ7IByy5yn9Sbxh5Bj-0Zk8sOes_gg" /><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Mr.MR — Manikanta Rachamanti"><title>Manikanta Rachamanti · Mr.MR</title><link rel="stylesheet" href="styles.css"></head><body><div class="noise"></div><header><div class="container nav"><a href="index.html" class="logo"><span>MR</span> Mr.MR</a><nav class="navlinks"><a class="" href="about.html">About</a><a class="" href="services.html">Services</a><a class="" href="projects.html">Work</a><a class="" href="index.html#products">Products</a><a href="index.html#contact">Contact</a></nav><a class="navcta" href="start-a-project.html">Start a Project <b>↗</b></a><button class="menu" aria-label="Open menu"><i></i><i></i></button></div></header><main><section class="hero" id="home"><div class="container hero-grid"><div class="reveal"><div class="eyebrow"><span></span> AI · TECHNOLOGY · DIGITAL GROWTH</div><h1>Building ideas that <em>move forward.</em></h1><p>I'm <strong>Manikanta Rachamanti</strong>, the person behind Mr.MR. I build practical digital experiences, explore AI and help turn early ideas into something people can use.</p><div class="actions"><a class="btn primary" href="start-a-project.html">Start a project <b>↗</b></a><a class="btn secondary" href="projects.html">See my work</a></div><div class="social"><a href="https://www.linkedin.com/in/mani-kanta-532610437" target="_blank">LinkedIn</a><span>•</span><a href="https://www.instagram.com/mr.manikanta_rachamanti/" target="_blank">Instagram</a><span>•</span><a href="https://github.com/rachamanti-mani" target="_blank">GitHub</a></div></div><div class="visual reveal delay"><div class="visualtop"><span>MR / 2026</span><span class="live">OPEN TO SELECT PROJECTS</span></div><div class="orbit"><div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div><div class="core">MR</div><b class="chip c1">AI</b><b class="chip c2">BUILD</b><b class="chip c3">GROW</b><b class="chip c4">SHIP</b></div><div class="visualbottom"><div><small>EDUCATION</small><strong>B.Tech ECE · 2027</strong></div><div><small>LOCATION</small><strong>India</strong></div></div></div></div></section>
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="google-site-verification" content="cV3dlOEMHW_KRwZ7IByy5yn9Sbxh5Bj-0Zk8sOes_gg">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Mr.MR — Manikanta Rachamanti: AI, technology, digital growth and practical products.">
+<meta name="theme-color" content="#080909"><title>Manikanta Rachamanti · Mr.MR</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+/* Selected Work refresh: styles are scoped to this section. */
+.work-section .work-intro{display:flex;justify-content:space-between;align-items:flex-end;gap:28px;margin:0 0 34px}
+.work-section .work-intro-copy{max-width:760px}
+.work-section .work-intro-copy p{max-width:680px;margin:16px 0 0;color:#9aa6b8;line-height:1.75}
+.work-section .work-filters{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end;padding-bottom:4px}
+.work-section .work-filter{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.035);color:#e9edf3;border-radius:999px;padding:10px 15px;font:inherit;font-size:13px;cursor:pointer;transition:all .2s;white-space:nowrap}
+.work-section .work-filter:hover,.work-section .work-filter[aria-pressed="true"]{border-color:#c9ff45;color:#d5ff62;background:rgba(201,255,69,.08)}
+.work-section .workgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;align-items:stretch}
+.work-section .project{min-width:0;overflow:hidden;display:grid;grid-template-columns:minmax(135px,.82fr) minmax(0,1.18fr);border:1px solid rgba(255,255,255,.12);border-radius:22px;background:linear-gradient(135deg,rgba(255,255,255,.045),rgba(255,255,255,.018));transition:transform .25s,border-color .25s,box-shadow .25s}
+.work-section .project:hover{transform:translateY(-4px);border-color:rgba(201,255,69,.38);box-shadow:0 18px 50px rgba(0,0,0,.22)}
+.work-section .project[hidden]{display:none!important}
+.work-section .art{min-height:300px;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;padding:20px;position:relative;overflow:hidden;isolation:isolate}
+.work-section .art:before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(circle at 50% 35%,rgba(201,255,69,.14),transparent 55%)}
+.work-section .art:after{content:"";position:absolute;inset:12px;border:1px solid rgba(255,255,255,.09);border-radius:15px;z-index:-1;pointer-events:none}
+.work-section .art strong{font-size:clamp(25px,2.5vw,42px);line-height:.9;letter-spacing:-.065em;color:#f6f7f2;text-shadow:0 5px 25px rgba(0,0,0,.3)}
+.work-section .art small{font-size:9px;letter-spacing:.14em;color:#b9c4d5;text-transform:uppercase}
+.work-section .art.masala-art{background:radial-gradient(circle at 25% 20%,#a84d19,transparent 50%),linear-gradient(145deg,#32180f,#17100e 80%)}
+.work-section .art.chef-art{background:radial-gradient(circle at 75% 20%,#745020,transparent 45%),linear-gradient(145deg,#292017,#101112 78%)}
+.work-section .art.city-art{background:radial-gradient(circle at 50% 20%,#164b62,transparent 50%),linear-gradient(145deg,#0d2632,#0b1015 78%)}
+.work-section .art.ai-art{background:radial-gradient(circle at 70% 20%,#203f78,transparent 48%),linear-gradient(145deg,#101d36,#0b1018 78%)}
+.work-section .art .art-symbol{font-size:49px;line-height:1;filter:drop-shadow(0 8px 15px rgba(0,0,0,.28))}
+.work-section .pbody{min-width:0;padding:21px;display:flex;flex-direction:column;align-items:flex-start}
+.work-section .project-topline{width:100%;display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:15px}
+.work-section .project-number{color:#8f9aab;font-size:12px;letter-spacing:.06em}
+.work-section .status{display:inline-flex;align-items:center;gap:8px;padding:7px 11px;border-radius:999px;font-size:12px;line-height:1.2;font-weight:600;border:1px solid currentColor;white-space:nowrap}
+.work-section .status:before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.work-section .status-live{color:#6df49a;background:rgba(30,220,100,.08)}
+.work-section .status-dev{color:#ffc34f;background:rgba(255,177,35,.08)}
+.work-section .status-idea{color:#c69aff;background:rgba(164,95,255,.09)}
+.work-section .pbody>small{color:#a8b4c5;font-size:10px;letter-spacing:.1em;line-height:1.6}
+.work-section .pbody h3{font-size:clamp(20px,1.8vw,27px);margin:9px 0 10px;letter-spacing:-.035em}
+.work-section .pbody p{color:#a9b4c4;line-height:1.7;font-size:14px;margin:0 0 15px}
+.work-section .tech-tags{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 17px}
+.work-section .tech-tags span{padding:6px 9px;border-radius:999px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.08);color:#dce2eb;font-size:11px;white-space:nowrap}
+.work-section .project-note{width:100%;padding:12px 13px;border-radius:13px;margin:0 0 16px;display:flex;gap:10px;align-items:flex-start;font-size:12px;line-height:1.55;border:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.035);color:#d5dce6}
+.work-section .project-note strong{display:block;font-size:12px;margin-bottom:2px;color:#f5f7fb}
+.work-section .project-note.dev-note{border-color:rgba(255,183,57,.18);background:rgba(255,183,57,.07)}
+.work-section .project-note.idea-note{border-color:rgba(173,111,255,.2);background:rgba(173,111,255,.08)}
+.work-section .project-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:auto;padding-top:2px}
+.work-section .project-actions .btn{padding:11px 14px;font-size:13px}
+.work-section .btn.project-play{background:#c9ff45;border-color:#c9ff45;color:#11150a}
+.work-section .btn.project-play:hover{background:#d9ff7b}
+.work-section .btn.disabled-action{opacity:.48;cursor:default;pointer-events:none}
+.work-section .all-projects{text-align:center;margin-top:30px}
+.work-section .all-projects .btn{display:inline-flex}
+@media(max-width:1100px){.work-section .work-intro{align-items:flex-start;flex-direction:column}.work-section .work-filters{justify-content:flex-start}.work-section .project{grid-template-columns:minmax(125px,.75fr) minmax(0,1.25fr)}.work-section .art{min-height:320px}.work-section .pbody{padding:17px}}
+@media(max-width:760px){.work-section .workgrid{grid-template-columns:1fr;gap:16px}.work-section .project{grid-template-columns:minmax(110px,.72fr) minmax(0,1.28fr);border-radius:18px}.work-section .art{min-height:280px;padding:13px}.work-section .art .art-symbol{font-size:38px}.work-section .art strong{font-size:clamp(22px,5vw,32px)}.work-section .pbody{padding:15px}.work-section .project-topline{align-items:flex-start;flex-direction:column;gap:8px;margin-bottom:12px}.work-section .pbody h3{font-size:21px}.work-section .pbody p{font-size:13px}}
+@media(max-width:480px){.work-section .project{grid-template-columns:1fr}.work-section .art{min-height:165px}.work-section .art .art-symbol{font-size:34px}.work-section .art strong{font-size:34px}.work-section .project-topline{flex-direction:row;align-items:center}.work-section .pbody{padding:18px}.work-section .work-filters{gap:6px}.work-section .work-filter{padding:9px 12px;font-size:12px}}
+</style>
+</head>
+<body>
+<div class="noise"></div>
+<header><div class="container nav">
+<a href="index.html" class="logo"><span>MR</span> Mr.MR</a>
+<nav class="navlinks"><a href="about.html">About</a><a href="services.html">Services</a><a href="projects.html">Work</a><a href="index.html#products">Products</a><a href="index.html#contact">Contact</a></nav>
+<a class="navcta" href="start-a-project.html">Start a Project <b>↗</b></a><button class="menu" aria-label="Open menu"><i></i><i></i></button>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="container hero-grid"><div class="reveal">
+<div class="eyebrow"><span></span> AI · TECHNOLOGY · DIGITAL GROWTH</div><h1>Building ideas that <em>move forward.</em></h1>
+<p>I'm <strong>Manikanta Rachamanti</strong>, the person behind Mr.MR. I build practical digital experiences, explore AI and help turn early ideas into something people can use.</p>
+<div class="actions"><a class="btn primary" href="start-a-project.html">Start a project <b>↗</b></a><a class="btn secondary" href="projects.html">See my work</a></div>
+<div class="social"><a href="https://www.linkedin.com/in/mani-kanta-532610437" target="_blank" rel="noopener">LinkedIn</a><span>•</span><a href="https://www.instagram.com/mr.manikanta_rachamanti/" target="_blank" rel="noopener">Instagram</a><span>•</span><a href="https://github.com/rachamanti-mani" target="_blank" rel="noopener">GitHub</a></div>
+</div><div class="visual reveal delay"><div class="visualtop"><span>MR / 2026</span><span class="live">OPEN TO SELECT PROJECTS</span></div>
+<div class="orbit"><div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div><div class="core">MR</div><b class="chip c1">AI</b><b class="chip c2">BUILD</b><b class="chip c3">GROW</b><b class="chip c4">SHIP</b></div>
+<div class="visualbottom"><div><small>EDUCATION</small><strong>B.Tech ECE · 2027</strong></div><div><small>LOCATION</small><strong>India</strong></div></div></div></div></section>
 <div class="ticker"><div><span>AI & AUTOMATION</span><i>✦</i><span>DIGITAL MARKETING</span><i>✦</i><span>SOFTWARE PRODUCTS</span><i>✦</i><span>FLUTTER</span><i>✦</i><span>PYTHON</span><i>✦</i><span>BUILD · LEARN · SHIP</span><i>✦</i></div></div>
-<section class="section"><div class="container"><div class="heading"><span>01</span><div><small>THE PERSON BEHIND MR.MR</small><h2>Curious by nature.<br><em>Builder by choice.</em></h2></div></div><div class="two"><div class="copy"><p class="lead">Mr.MR is my personal technology and digital-growth brand — a place where I build, experiment, learn and share.</p><p>I'm pursuing B.Tech ECE at Bapatla Engineering College (Autonomous), graduating in 2027. My interests span AI, software, cloud, automation, mobile apps, digital marketing and product ideas.</p><a class="btn secondary" href="about.html">More about me ↗</a></div><div class="facts"><div><small>DEGREE</small><strong>B.Tech — ECE</strong></div><div><small>GRADUATION</small><strong>2027</strong></div><div><small>CGPA</small><strong>8.29</strong></div><div><small>INTERESTS</small><strong>AI · Software · Cloud · Growth</strong></div></div></div></div></section>
-<section class="section dark"><div class="container"><div class="heading"><span>02</span><div><small>WHAT I CAN HELP WITH</small><h2>Digital work that starts with <em>the problem.</em></h2></div></div><div class="cards"><article class="card"><b>01</b><h3>AI & Automation</h3><p>AI workflows, research systems and practical automation ideas.</p><a href="start-a-project.html">Discuss AI work <span>↗</span></a></article><article class="card"><b>02</b><h3>Digital Marketing</h3><p>Meta Ads support, campaign thinking, creative direction and reporting.</p><a href="start-a-project.html">Discuss marketing <span>↗</span></a></article><article class="card"><b>03</b><h3>Web & Product</h3><p>Professional landing pages and early-stage product concepts.</p><a href="start-a-project.html">Discuss a website <span>↗</span></a></article><article class="card"><b>04</b><h3>Creative Technology</h3><p>Presentations, digital assets and technical storytelling.</p><a href="start-a-project.html">Discuss your idea <span>↗</span></a></article></div><div style="margin-top:35px"><a class="btn secondary" href="services.html">Explore all services ↗</a></div></div></section>
-<section class="section"><div class="container"><div class="heading"><span>03</span><div><small>SELECTED WORK</small><h2>Things I've been <em>building.</em></h2></div></div><div class="workgrid"><article class="project featured"><div class="art city"><strong>CITY<br>PULSE</strong><small>SMART CITY PLATFORM</small></div><div class="pbody"><small>FLUTTER · MAPS · REST APIs</small><h3>City Pulse</h3><p>Smart-city app concept bringing services, updates, maps, alerts, complaints and citizen experiences into one platform.</p></div></article><article class="project"><div class="art ai"><strong>AI<br>REVENUE</strong><small>STRATEGY ENGINE</small></div><div class="pbody"><small>NEXT.JS · AI · MARKETING</small><h3>AI Revenue Engine</h3><p>AI-first product concept for understanding businesses and generating campaign strategy.</p></div></article><article class="project"><div class="art dine"><strong>SMART<br>DINE</strong><small>ETA-BASED DINING</small></div><div class="pbody"><small>FOOD TECH · UX</small><h3>Smart Dine</h3><p>Dining concept focused on reducing waiting time through booking, orders and ETA.</p></div></article><article class="project"><div class="art game" style="background:linear-gradient(135deg,#ff7a1a 0%,#4a2c1d 100%)"><strong>MASALA<br>MERGE</strong><small>FOOD MERGE PUZZLE</small></div><div class="pbody"><small>HTML · CSS · JAVASCRIPT</small><h3>Masala Merge</h3><p>Free browser puzzle game with an Indian food theme. Swipe to merge ingredients from chilli to the Royal Thali.</p><a class="btn secondary" href="https://masala-merge.vercel.app/" target="_blank" rel="noopener">Play now <b>↗</b></a></div></article></div><div style="margin-top:35px"><a class="btn secondary" href="projects.html">View all projects ↗</a></div></div></section>
-<section class="section dark" id="products"><div class="container"><div class="heading"><span>04</span><div><small>MR.MR DIGITAL PRODUCTS</small><h2>Practical resources <em>for people who build.</em></h2></div></div><div class="product"><div><h3>Learn once.<br>Build faster.</h3><p>Guides, templates, AI resources and practical digital products for students, creators and builders.</p><a class="btn primary" href="mailto:rachamantimani243@gmail.com?subject=Mr.MR%20Digital%20Products">Ask about products ↗</a></div><div class="productlist"><div><b>01</b><span>AI Tool Guides</span></div><div><b>02</b><span>Creator Resources</span></div><div><b>03</b><span>Student & Career Guides</span></div><div><b>04</b><span>Mr.MR Templates</span></div></div></div></div></section>
+<section class="section"><div class="container"><div class="heading"><span>01</span><div><small>THE PERSON BEHIND MR.MR</small><h2>Curious by nature.<br><em>Builder by choice.</em></h2></div></div><div class="two">
+<div class="copy"><p class="lead">Mr.MR is my personal technology and digital-growth brand — a place where I build, experiment, learn and share.</p><p>I'm pursuing B.Tech ECE at Bapatla Engineering College (Autonomous), graduating in 2027. My interests span AI, software, cloud, automation, mobile apps, digital marketing and product ideas.</p><a class="btn secondary" href="about.html">More about me ↗</a></div>
+<div class="facts"><div><small>DEGREE</small><strong>B.Tech — ECE</strong></div><div><small>GRADUATION</small><strong>2027</strong></div><div><small>CGPA</small><strong>8.29</strong></div><div><small>INTERESTS</small><strong>AI · Software · Cloud · Growth</strong></div></div>
+</div></div></section>
+<section class="section dark"><div class="container"><div class="heading"><span>02</span><div><small>WHAT I CAN HELP WITH</small><h2>Digital work that starts with <em>the problem.</em></h2></div></div><div class="cards">
+<article class="card"><b>01</b><h3>AI & Automation</h3><p>AI workflows, research systems and practical automation ideas.</p><a href="start-a-project.html">Discuss AI work <span>↗</span></a></article>
+<article class="card"><b>02</b><h3>Digital Marketing</h3><p>Meta Ads support, campaign thinking, creative direction and reporting.</p><a href="start-a-project.html">Discuss marketing <span>↗</span></a></article>
+<article class="card"><b>03</b><h3>Web & Product</h3><p>Professional landing pages and early-stage product concepts.</p><a href="start-a-project.html">Discuss a website <span>↗</span></a></article>
+<article class="card"><b>04</b><h3>Creative Technology</h3><p>Presentations, digital assets and technical storytelling.</p><a href="start-a-project.html">Discuss your idea <span>↗</span></a></article>
+</div><div style="margin-top:35px"><a class="btn secondary" href="services.html">Explore all services ↗</a></div></div></section>
+
+<section class="section work-section" id="work"><div class="container">
+<div class="heading work-heading"><span>03</span><div class="work-intro"><div class="work-intro-copy"><small>SELECTED WORK</small><h2>Things I've been <em>building.</em></h2><p>A look at my current projects — from live browser games to products in development and early-stage concepts.</p></div>
+<div class="work-filters" role="group" aria-label="Filter projects by status"><button class="work-filter" type="button" data-filter="all" aria-pressed="true">All (4)</button><button class="work-filter" type="button" data-filter="live" aria-pressed="false">Live (2)</button><button class="work-filter" type="button" data-filter="developing" aria-pressed="false">Developing (1)</button><button class="work-filter" type="button" data-filter="idea" aria-pressed="false">Idea (1)</button></div></div></div>
+<div class="workgrid" id="project-grid">
+<article class="project" data-status="live"><div class="art masala-art" aria-label="Masala Merge game artwork"><div class="art-symbol" aria-hidden="true">🍛</div><strong>MASALA<br>MERGE</strong><small>INDIAN FOOD PUZZLE</small></div><div class="pbody">
+<div class="project-topline"><span class="status status-live">Live</span><span class="project-number">01 / 04</span></div><small>HTML · CSS · JAVASCRIPT</small><h3>Masala Merge</h3><p>A free browser puzzle game with an Indian food theme. Merge ingredients, progress through new combinations and work your way towards the Royal Thali.</p>
+<div class="tech-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Game Development</span></div><div class="project-actions"><a class="btn project-play" href="https://masala-merge.vercel.app/" target="_blank" rel="noopener noreferrer">Play game ↗</a><a class="btn secondary" href="https://masala-merge.vercel.app/" target="_blank" rel="noopener noreferrer">Project ↗</a></div>
+</div></article>
+<article class="project" data-status="live"><div class="art chef-art" aria-label="MR.CHEF game artwork"><div class="art-symbol" aria-hidden="true">👨‍🍳</div><strong>MR.CHEF</strong><small>MERGE · COOK · SERVE</small></div><div class="pbody">
+<div class="project-topline"><span class="status status-live">Live</span><span class="project-number">02 / 04</span></div><small>HTML · CSS · JAVASCRIPT</small><h3>MR.CHEF</h3><p>An Indian-food-inspired browser game where you combine ingredients, discover dishes and build your kitchen skills. Play directly in your browser.</p>
+<div class="tech-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Game Development</span></div><div class="project-actions"><a class="btn project-play" href="https://mr-chef-03-red.vercel.app/" target="_blank" rel="noopener noreferrer">Play game ↗</a><a class="btn secondary" href="https://mr-chef-03-red.vercel.app/" target="_blank" rel="noopener noreferrer">Project ↗</a></div>
+</div></article>
+<article class="project" data-status="developing"><div class="art city-art" aria-label="City Pulse smart city concept artwork"><div class="art-symbol" aria-hidden="true">🏙️</div><strong>CITY<br>PULSE</strong><small>SMART CITY PLATFORM</small></div><div class="pbody">
+<div class="project-topline"><span class="status status-dev">In Development</span><span class="project-number">03 / 04</span></div><small>FLUTTER · MAPS · REST APIs</small><h3>City Pulse</h3><p>A smart-city app concept bringing services, local updates, maps, alerts, complaints and citizen experiences into one platform.</p>
+<div class="tech-tags"><span>Flutter</span><span>Maps API</span><span>REST APIs</span><span>Mobile App</span></div><div class="project-note dev-note"><span aria-hidden="true">⚙️</span><div><strong>Currently in development</strong>Working on the core experience and initial prototype.</div></div><div class="project-actions"><span class="btn secondary disabled-action" aria-disabled="true">Not launched yet</span><a class="btn secondary" href="projects.html">Work overview ↗</a></div>
+</div></article>
+<article class="project" data-status="idea"><div class="art ai-art" aria-label="MR.AI concept artwork"><div class="art-symbol" aria-hidden="true">◈</div><strong>MR.AI</strong><small>AI REVENUE ENGINE</small></div><div class="pbody">
+<div class="project-topline"><span class="status status-idea">Idea Stage</span><span class="project-number">04 / 04</span></div><small>AI · BUSINESS · MARKETING</small><h3>MR.AI — AI Revenue Engine</h3><p>An early-stage concept for AI-powered business insights, marketing strategy, campaign ideas and growth opportunities.</p>
+<div class="tech-tags"><span>AI</span><span>Business Insights</span><span>Marketing</span><span>Analytics</span></div><div class="project-note idea-note"><span aria-hidden="true">✦</span><div><strong>Concept exploration</strong>Defining the use cases, potential features and product direction.</div></div><div class="project-actions"><span class="btn secondary disabled-action" aria-disabled="true">Concept in progress</span><a class="btn secondary" href="mailto:rachamantimani243@gmail.com?subject=MR.AI%20Concept">Discuss the idea ↗</a></div>
+</div></article>
+</div><div class="all-projects"><a class="btn secondary" href="projects.html">View all projects ↗</a></div>
+</div></section>
+
+<section class="section dark" id="products"><div class="container"><div class="heading"><span>04</span><div><small>MR.MR DIGITAL PRODUCTS</small><h2>Practical resources <em>for people who build.</em></h2></div></div><div class="product">
+<div><h3>Learn once.<br>Build faster.</h3><p>Guides, templates, AI resources and practical digital products for students, creators and builders.</p><a class="btn primary" href="mailto:rachamantimani243@gmail.com?subject=Mr.MR%20Digital%20Products">Ask about products ↗</a></div>
+<div class="productlist"><div><b>01</b><span>AI Tool Guides</span></div><div><b>02</b><span>Creator Resources</span></div><div><b>03</b><span>Student & Career Guides</span></div><div><b>04</b><span>Mr.MR Templates</span></div></div>
+</div></div></section>
 <section class="start"><div class="container startgrid"><div><div class="page-kicker">READY TO START?</div><h1>Have an idea?<br><em>Let's talk.</em></h1><p>Tell me what you're building and what you need help with. I'll review the details and get back to you.</p></div><div><a class="btn" href="start-a-project.html" style="background:#080909;color:#fff;border-color:#080909;padding:16px 20px">Tell me about your project ↗</a></div></div></section>
-<section class="contact"><div class="container contactgrid"><div><small class="page-kicker">CONTACT</small><h2>Let's make<br><em>something useful.</em></h2></div><div class="links"><a href="mailto:rachamantimani243@gmail.com"><small>EMAIL</small><strong>rachamantimani243@gmail.com</strong><b>↗</b></a><a href="https://www.linkedin.com/in/mani-kanta-532610437" target="_blank"><small>LINKEDIN</small><strong>Connect professionally</strong><b>↗</b></a><a href="https://www.instagram.com/mr.manikanta_rachamanti/" target="_blank"><small>INSTAGRAM</small><strong>@mr.manikanta_rachamanti</strong><b>↗</b></a><a href="https://github.com/rachamanti-mani" target="_blank"><small>GITHUB</small><strong>rachamanti-mani</strong><b>↗</b></a></div></div></section></main><footer><div class="container"><strong>Mr.MR</strong><span>Manikanta Rachamanti · AI · Technology · Digital Growth</span><span>© 2026</span></div></footer><script src="script.js"></script></body></html>
+<section class="contact" id="contact"><div class="container contactgrid"><div><small class="page-kicker">CONTACT</small><h2>Let's make<br><em>something useful.</em></h2></div><div class="links">
+<a href="mailto:rachamantimani243@gmail.com"><small>EMAIL</small><strong>rachamantimani243@gmail.com</strong><b>↗</b></a>
+<a href="https://www.linkedin.com/in/mani-kanta-532610437" target="_blank" rel="noopener"><small>LINKEDIN</small><strong>Connect professionally</strong><b>↗</b></a>
+<a href="https://www.instagram.com/mr.manikanta_rachamanti/" target="_blank" rel="noopener"><small>INSTAGRAM</small><strong>@mr.manikanta_rachamanti</strong><b>↗</b></a>
+<a href="https://github.com/rachamanti-mani" target="_blank" rel="noopener"><small>GITHUB</small><strong>rachamanti-mani</strong><b>↗</b></a>
+</div></div></section>
+</main>
+<footer><div class="container"><strong>Mr.MR</strong><span>Manikanta Rachamanti · AI · Technology · Digital Growth</span><span>© 2026</span></div></footer>
+<script src="script.js"></script>
+<script>
+(() => {
+  const section = document.querySelector('.work-section');
+  if (!section) return;
+  const buttons = section.querySelectorAll('.work-filter');
+  const cards = section.querySelectorAll('.project[data-status]');
+  buttons.forEach(button => button.addEventListener('click', () => {
+    const filter = button.dataset.filter;
+    buttons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+    cards.forEach(card => { card.hidden = filter !== 'all' && card.dataset.status !== filter; });
+  }));
+})();
+</script>
+</body>
+</html>
